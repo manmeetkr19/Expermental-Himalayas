@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiential Himalaya | Contact</title>
+	<!-- Start Normalize CSS -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Start Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<!-- Start Global CSS -->
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+    <script >
+        function validation()
+        {
+           var fname= document.getElementById("fname").value;
+           var lname= document.getElementById("lname").value;
+           var people= document.getElementById("pep").value;
+           var pnum= document.getElementById("pnum").value;
+           var package= document.getElementById("pack").value;
+           if(fname==null||lname==null||people<=0||pnum.length<10||pnum.length>10||package=="none")
+               {
+                   alert("invalid please fill carefully");
+               }
+        }
+    </script>
+</head>
+<body>
+
+	<header>
+
+		<img id="logo" src="img/Logo2.png">
+
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="techsupport.html">Travel Support</a>
+			<a href="courses.html">Packages</a>
+			<a href="learntech.html">Resources</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+
+	</header>
+
+	 <center><h1 class="h1lt">Booking</h1></center>
+
+ <form action="book.php" method="post">
+  First name:<br>
+  <input id="fname" type="text" name="firstname" value="" onblur="validation()">
+  <br>
+  Last name:<br>
+  <input id="lname" type="text" name="lastname" value="" onblur="validation()">
+  <br>
+  No of People:<br>
+  <input id="pep" type="number" name="num" value="" onblur="validation()">
+  <br>
+  <br>
+  Phone Number:<br>
+  <input id="pnum" type="text" name="phone" value="" onblur="validation()">
+  <br>
+  Package Name:<br>
+  <select id="pack" name="pack" id="package">
+                <option value="none" selected>None</option>
+                <!-- using selected tag selects that option by default  -->
+                <option value="pk1">PK1</option>
+                <option value="pk2">PK2</option>
+                <option value="pk3">PK3</option>
+                <option value="pk4">PK4</option>
+            </select>
+  <br>
+  <br>
+  <input type="submit" value="Submit" onclick="validation()">
+</form>
+
+	<footer>
+
+		<img id="logo" src="img/Logo2.png">
+
+		<p id="footer">© Copyright 2021. All Rights Reserved. | Gomitande</p>
+
+	</footer>
+
+
+
+</body>
+</html>
